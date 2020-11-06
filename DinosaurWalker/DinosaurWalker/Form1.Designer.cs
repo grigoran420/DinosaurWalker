@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +48,9 @@
             this.начатьИгратьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.стратToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.стопToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.SelectProcess = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,7 +149,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(360, 128);
+            this.label10.Location = new System.Drawing.Point(359, 102);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 16);
             this.label10.TabIndex = 9;
@@ -159,6 +163,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 10;
+            this.textBox1.Text = "0";
             // 
             // textBox2
             // 
@@ -167,6 +172,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 11;
+            this.textBox2.Text = "0";
             // 
             // listBox1
             // 
@@ -174,7 +180,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Items.AddRange(new object[] {
-            "Space",
+            " ",
             "Enter",
             "Tab",
             "Shift",
@@ -188,6 +194,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel1.Location = new System.Drawing.Point(180, 173);
             this.panel1.Name = "panel1";
@@ -199,10 +206,11 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(15, 224);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(449, 33);
+            this.button1.Size = new System.Drawing.Size(209, 33);
             this.button1.TabIndex = 14;
             this.button1.Text = "Старт";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // menuStrip1
             // 
@@ -210,7 +218,7 @@
             this.начатьИгратьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(480, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(717, 24);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -229,6 +237,7 @@
             this.стратToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.стратToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.стратToolStripMenuItem.Text = "Страт";
+            this.стратToolStripMenuItem.Click += new System.EventHandler(this.стратToolStripMenuItem_Click);
             // 
             // стопToolStripMenuItem
             // 
@@ -237,12 +246,42 @@
             | System.Windows.Forms.Keys.S)));
             this.стопToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.стопToolStripMenuItem.Text = "Стоп";
+            this.стопToolStripMenuItem.Click += new System.EventHandler(this.стопToolStripMenuItem_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Red;
+            this.checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.Location = new System.Drawing.Point(269, 233);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(121, 20);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Режим работы";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // SelectProcess
+            // 
+            this.SelectProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SelectProcess.FormattingEnabled = true;
+            this.SelectProcess.ItemHeight = 16;
+            this.SelectProcess.Location = new System.Drawing.Point(517, 33);
+            this.SelectProcess.Name = "SelectProcess";
+            this.SelectProcess.Size = new System.Drawing.Size(188, 228);
+            this.SelectProcess.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 272);
+            this.ClientSize = new System.Drawing.Size(717, 272);
+            this.Controls.Add(this.SelectProcess);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listBox1);
@@ -262,6 +301,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Dino Walker";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -290,6 +330,9 @@
         private System.Windows.Forms.ToolStripMenuItem начатьИгратьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem стратToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem стопToolStripMenuItem;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ListBox SelectProcess;
     }
 }
 
