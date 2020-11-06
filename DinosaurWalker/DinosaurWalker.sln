@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinosaurWalker", "DinosaurWalker\DinosaurWalker.csproj", "{4DBF895F-5DB9-412D-8BD8-712A09EC31CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DBF895F-5DB9-412D-8BD8-712A09EC31CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBF895F-5DB9-412D-8BD8-712A09EC31CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBF895F-5DB9-412D-8BD8-712A09EC31CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBF895F-5DB9-412D-8BD8-712A09EC31CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18504864-C9CE-47FE-AB71-7543B585F9B7}
+	EndGlobalSection
+EndGlobal

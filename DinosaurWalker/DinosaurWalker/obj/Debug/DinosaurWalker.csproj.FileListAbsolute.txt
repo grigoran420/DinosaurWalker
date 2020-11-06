@@ -1,0 +1,10 @@
+C:\Users\Yurik\source\repos\DinosaurWalker\DinosaurWalker\bin\Debug\DinosaurWalker.exe.config
+C:\Users\Yurik\source\repos\DinosaurWalker\DinosaurWalker\bin\Debug\DinosaurWalker.exe
+C:\Users\Yurik\source\repos\DinosaurWalker\DinosaurWalker\bin\Debug\DinosaurWalker.pdb
+C:\Users\Yurik\source\repos\DinosaurWalker\DinosaurWalker\obj\Debug\DinosaurWalker.csprojAssemblyReference.cache
+C:\Users\Yurik\source\repos\DinosaurWalker\DinosaurWalker\obj\Debug\DinosaurWalker.Form1.resources
+C:\Users\Yurik\source\repos\DinosaurWalker\DinosaurWalker\obj\Debug\DinosaurWalker.Properties.Resources.resources
+C:\Users\Yurik\source\repos\DinosaurWalker\DinosaurWalker\obj\Debug\DinosaurWalker.csproj.GenerateResource.cache
+C:\Users\Yurik\source\repos\DinosaurWalker\DinosaurWalker\obj\Debug\DinosaurWalker.csproj.CoreCompileInputs.cache
+C:\Users\Yurik\source\repos\DinosaurWalker\DinosaurWalker\obj\Debug\DinosaurWalker.exe
+C:\Users\Yurik\source\repos\DinosaurWalker\DinosaurWalker\obj\Debug\DinosaurWalker.pdb
