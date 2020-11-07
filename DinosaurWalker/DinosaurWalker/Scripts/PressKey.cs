@@ -8,8 +8,10 @@ using System.Windows.Forms;
 
 namespace DinosaurWalker.Scripts
 {
+
     class PressKey
     {
+
         public PressKey (string key)
         {
             SendKeys.Send(key);
