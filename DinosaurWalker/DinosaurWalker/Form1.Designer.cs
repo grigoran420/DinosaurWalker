@@ -51,6 +51,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SelectProcess = new System.Windows.Forms.ListBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -162,7 +164,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "715";
+            this.textBox1.Text = "682";
             // 
             // textBox2
             // 
@@ -171,7 +173,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 11;
-            this.textBox2.Text = "405";
+            this.textBox2.Text = "403";
             // 
             // listBox1
             // 
@@ -236,7 +238,7 @@
             // 
             this.стратToolStripMenuItem.Name = "стратToolStripMenuItem";
             this.стратToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.стратToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.стратToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.стратToolStripMenuItem.Text = "Страт";
             this.стратToolStripMenuItem.Click += new System.EventHandler(this.стратToolStripMenuItem_Click);
             // 
@@ -245,7 +247,7 @@
             this.стопToolStripMenuItem.Name = "стопToolStripMenuItem";
             this.стопToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.стопToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.стопToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.стопToolStripMenuItem.Text = "Стоп";
             this.стопToolStripMenuItem.Click += new System.EventHandler(this.стопToolStripMenuItem_Click);
             // 
@@ -278,6 +280,16 @@
             this.SelectProcess.Name = "SelectProcess";
             this.SelectProcess.Size = new System.Drawing.Size(188, 228);
             this.SelectProcess.TabIndex = 17;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 1;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // Form1
             // 
@@ -341,6 +353,8 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ListBox SelectProcess;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
     }
 }
 

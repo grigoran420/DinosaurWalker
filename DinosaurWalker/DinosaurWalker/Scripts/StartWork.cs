@@ -32,27 +32,12 @@ namespace DinosaurWalker.Scripts
         ///<value name="cx, cy"> размеры окна </value>
         ///<value name="uFlags"> Флаги изменения размера и положения окна </value>
 
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool ShowWindow(IntPtr hWnd, int showWindowCommand);
-
-        [DllImport("user32.dll")]
-        static extern bool SetForegroundWindow(IntPtr hWnd);
-
-        [DllImport("user32.dll", SetLastError = true)]
-        static extern bool SetWindowPos(IntPtr hWnd, int hWndInsertAfter, int X, int Y, int cx, int cy, int uFlags);
+        
 
 
         public StartWork(int x, Label LX, int y, Label LY, string key, Panel Color, string Proces, Label textCol)
         {
-            ///<summary>направляет фокус на окно, разрешает ввод в него с клавиатуры, меняет местоположение</summary>
-            Process[] procs = Process.GetProcessesByName(Proces);
-            foreach (Process p in procs)
-            {
-                ShowWindow(p.MainWindowHandle, 1);
-                SetForegroundWindow(p.MainWindowHandle);
-                SetWindowPos(p.MainWindowHandle, 0, 0, 0, 1920, 500, 0x0040);
-            }
+            
 
             ///<summary>разрешает нажимает кнопки</summary>
             if (key != " ") { key = "{" + key.ToUpperInvariant() + "}"; }
