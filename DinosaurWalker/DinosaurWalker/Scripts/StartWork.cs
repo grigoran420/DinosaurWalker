@@ -43,7 +43,7 @@ namespace DinosaurWalker.Scripts
         static extern bool SetWindowPos(IntPtr hWnd, int hWndInsertAfter, int X, int Y, int cx, int cy, int uFlags);
 
 
-        public StartWork(int x, int y, string key, Panel Color, string Proces)
+        public StartWork(int x, Label LX, int y, Label LY, string key, Panel Color, string Proces, Label textCol)
         {
             ///<summary>направляет фокус на окно, разрешает ввод в него с клавиатуры, меняет местоположение</summary>
             Process[] procs = Process.GetProcessesByName(Proces);
@@ -56,7 +56,15 @@ namespace DinosaurWalker.Scripts
 
             ///<summary>разрешает нажимает кнопки</summary>
             if (key != " ") { key = "{" + key.ToUpperInvariant() + "}"; }
-            PressKey press = new PressKey(key);
+            ColorDetect detect = new ColorDetect(x, y, Color, textCol);
+            if (detect.ColorDetected)
+            {
+                PressKey press = new PressKey(key);
+            }
+            MouseMove move = new MouseMove(x, y, LX, LY);
+            
+
+
 
         }
     }

@@ -42,12 +42,15 @@ namespace DinosaurWalker
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            StartWork start = new StartWork(
-                Int32.Parse(textBox1.Text),
-                Int32.Parse(textBox2.Text),
-                listBox1.SelectedItem.ToString(),
-                panel1,
-                SelectProcess.SelectedItem.ToString());
+                StartWork start = new StartWork(
+                    Int32.Parse(textBox1.Text),
+                    label3,
+                    Int32.Parse(textBox2.Text),
+                    label4,
+                    listBox1.SelectedItem.ToString(),
+                    panel1,
+                    SelectProcess.SelectedItem.ToString(),
+                    label10);
         }
 
         private void Form1_Load(object sender, EventArgs e)

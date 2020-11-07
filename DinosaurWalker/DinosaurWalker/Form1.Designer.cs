@@ -149,12 +149,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(359, 102);
+            this.label10.Location = new System.Drawing.Point(218, 211);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 16);
             this.label10.TabIndex = 9;
             this.label10.Text = "label10";
-            this.label10.Visible = false;
             // 
             // textBox1
             // 
@@ -163,7 +162,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "0";
+            this.textBox1.Text = "715";
             // 
             // textBox2
             // 
@@ -172,7 +171,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 11;
-            this.textBox2.Text = "0";
+            this.textBox2.Text = "405";
             // 
             // listBox1
             // 
@@ -193,7 +192,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.BackColor = System.Drawing.Color.Yellow;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel1.Location = new System.Drawing.Point(180, 173);
@@ -203,11 +202,13 @@
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(15, 224);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(209, 33);
             this.button1.TabIndex = 14;
+            this.button1.TabStop = false;
             this.button1.Text = "Старт";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -253,16 +254,19 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Red;
             this.checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.checkBox1.Location = new System.Drawing.Point(269, 233);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(121, 20);
+            this.checkBox1.Size = new System.Drawing.Size(119, 20);
             this.checkBox1.TabIndex = 16;
             this.checkBox1.Text = "Режим работы";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // timer1
             // 
+            this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // SelectProcess
@@ -298,8 +302,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Dino Walker";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
